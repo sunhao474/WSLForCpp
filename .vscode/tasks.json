@@ -9,6 +9,8 @@
                 "-g",
                 "${file}",
                 "./chap_1/chap_1.cpp",
+                "./chap_2/chap_2.cpp",
+                "./algorithm/intReverse.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

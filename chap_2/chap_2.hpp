@@ -1,0 +1,2 @@
+void pointAndRef();
+void constExample();
