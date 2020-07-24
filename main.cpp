@@ -11,7 +11,6 @@ int main() {
     if (isPrime(a) && isPrime(intReverse(a)) ) {
         std::cout << a << std::endl;
     }
-
     pointAndRef();
     constExample();
     return 0;
