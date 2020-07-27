@@ -40,3 +40,22 @@ void constExample() {
     p2 = p3; // correct,p2和p3都是底层const
     p2 = &i; // correct, 非常量可以转化为常量const
 }
+
+void autoExample() {
+    // auto 会忽略顶层const
+    int i = 0, &r = i;
+    auto a = r;// a是int型，不是引用
+
+    const int ci = i, &cr = ci;
+    auto b = ci; // ci是一个顶层const
+    auto c = cr; // cr是ci的别名，ci是顶层const
+    auto d = &i; // d是一个整形指针
+    auto e = &ci; // e是一个指向整数常量的指针(对常量对象取地址是一种底层const)
+
+    // 使用auto声明顶层const需要主动
+    const auto f = i;
+}
+
+void decltypeExample() {
+
+}
